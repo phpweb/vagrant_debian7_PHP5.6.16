@@ -1,0 +1,1 @@
+ln -sfn /vagrant/vhosts/* /etc/apache2/sites-enabled/
