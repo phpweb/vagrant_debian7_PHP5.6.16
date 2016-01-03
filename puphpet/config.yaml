@@ -224,7 +224,48 @@ apache:
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
                             provider: filesmatch
-                    provider: directory                 
+                    provider: directory
+        campana_schott:
+            servername: local.campana-schott
+            serveraliases:
+                - local.campana-schott
+            docroot: /var/www/campana/src/project_root/htdocs
+            port: '80'
+            setenv:
+                - 'TYPO3_DB_HOST localhost'
+                - 'TYPO3_DB_USER root'
+                - 'TYPO3_DB_PWD root'
+                - 'TYPO3_DB_NAME campana_schott'
+                - 'TYPO3_CONTEXT Development'
+            setenvif:
+                - 'Authorization "(.*)" HTTP_AUTHORIZATION=$1'
+            custom_fragment: ''
+            ssl: '0'
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+            ssl_protocol: ''
+            ssl_cipher: ''
+            directories:
+                avd_5f3d468d33fh:
+                    path: /var/www/campana/src/project_root/htdocs
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - 'all granted'
+                    custom_fragment: ''
+                    files_match:
+                        avdfm_igd4a46apv69:
+                            path: \.php$
+                            sethandler: 'proxy:fcgi://127.0.0.1:9000'
+                            custom_fragment: ''
+                            provider: filesmatch
+                    provider: directory                    
 php:
     install: '1'
     settings:
