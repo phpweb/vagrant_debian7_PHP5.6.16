@@ -1,5 +1,5 @@
 vhosts/
 .DS_Store
-.vagrant
-.bundle
+.vagrant/
+.bundle/
 1
