@@ -3,7 +3,7 @@ vagrantfile:
     vm:
         box: puphpet/debian75-x64
         box_url: puphpet/debian75-x64
-        hostname: haydabre
+        hostname: debianphp56
         memory: '1024'
         cpus: '2'
         chosen_provider: parallels
