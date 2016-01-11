@@ -3,12 +3,12 @@ vagrantfile:
     vm:
         box: puphpet/debian75-x64
         box_url: puphpet/debian75-x64
-        hostname: debianphp56
+        hostname: debianphp56ram
         memory: '1024'
         cpus: '2'
         chosen_provider: parallels
         network:
-            private_network: 192.168.58.115
+            private_network: 192.168.58.120
             forwarded_port:
                 vflnp_ggg8wal0cs0w:
                     host: '9562'
